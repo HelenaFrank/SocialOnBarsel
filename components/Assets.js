@@ -1,14 +1,14 @@
-import * as React from 'react';
-import { Text, View, StyleSheet, Image } from 'react-native';
+import { Text, View, StyleSheet} from 'react-native';
+import React, { Component } from 'react'
 
 export default class Assets extends React.Component {
   render() {
     return (
-      <View style={styles.container}>
-        <Text style={styles.paragraph}>
-          Det virker
-        </Text>
-      </View>
+        <View style={styles.container}>
+          <Text style={styles.paragraph}>
+            hej
+          </Text>
+        </View>
     );
   }
 }

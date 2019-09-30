@@ -2,23 +2,26 @@ import * as React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import Constants from 'expo-constants';
 
-// pure javascript modules available in npm
-import { Card } from 'react-native-paper';
-
 // import from local files
 import Assets from './components/Assets';
+import PresentationalComponent from './components/PresentationalComponent'
 
 export default class App extends React.Component {
+  state = {
+    myState: "lortet virker ikke..."
+  }
+  updateState = () => {
+    this.setState( {myState: "nu virker lortet!"} )
+  }
   render() {
     return (
       <View style={styles.container}>
-        <Text style={styles.paragraph}>
-          Det virker
-        </Text>
-        <Card>
-          <Assets/>
-        </Card>
+        <PresentationalComponent>
+          myState = {this.state.myState}
+          updateState = {this.updateState}
+        </PresentationalComponent>
       </View>
+      
     );
   }
 }
